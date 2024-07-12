@@ -4,6 +4,6 @@ import com.cpt.payments.dto.PaymentRequestDto;
 
 public interface Validator {
 	
-	public boolean doValidate(PaymentRequestDto request);
+	public void doValidate(PaymentRequestDto request);
 
 }

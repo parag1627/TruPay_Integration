@@ -1,28 +1,39 @@
 package com.cpt.payments.pojo;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
-
-@Getter
-@Setter
-@ToString
 public class PaymentRequest {
 
-	private int paymentId;
+	private User user;
+    private Payment payment;
 
-	public int getPaymentId() {
-		return paymentId;
-	}
+    public PaymentRequest() {
+    }
 
-	public void setPaymentId(int paymentId) {
-		this.paymentId = paymentId;
-	}
+    public PaymentRequest(User user, Payment payment) {
+        this.user = user;
+        this.payment = payment;
+    }
 
-	@Override
-	public String toString() {
-		// TODO Auto-generated method stub
-		return super.toString();
-	}
+    public User getUser() {
+        return user;
+    }
 
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Payment getPayment() {
+        return payment;
+    }
+
+    public void setPayment(Payment payment) {
+        this.payment = payment;
+    }
+
+    @Override
+    public String toString() {
+        return "PaymentRequest{" +
+                "user=" + user +
+                ", payment=" + payment +
+                '}';
+    }
 }

@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Service;
 
+import com.cpt.payments.constants.ErrorCodeEnum;
 import com.cpt.payments.constants.ValidationRules;
 import com.cpt.payments.dto.PaymentRequestDto;
 import com.cpt.payments.dto.PaymentResponseDto;
@@ -34,8 +35,9 @@ public class PaymentServiceImpl implements PaymentService {
 			Validator validationBean = (Validator) appContext.getBean(validationEnum.getClazz());
 
 			System.out.println("Got this bean from AppContext validationBean:" + validationBean);
-			boolean isValid = validationBean.doValidate(request);
-
+			
+			validationBean.doValidate(request);
+			
 		}
 		
 		

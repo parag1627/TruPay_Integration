@@ -1,5 +1,8 @@
 package com.cpt.payments.dto;
 
+import com.cpt.payments.pojo.Payment;
+import com.cpt.payments.pojo.User;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -9,20 +12,22 @@ import lombok.ToString;
 @ToString
 public class PaymentRequestDto {
 
-	private int paymentId;
-
-	public int getPaymentId() {
-		return paymentId;
+	private UserDTO user;
+    private PaymentDTO payment;
+	public UserDTO getUser() {
+		return user;
 	}
-
-	public void setPaymentId(int paymentId) {
-		this.paymentId = paymentId;
+	public void setUser(UserDTO user) {
+		this.user = user;
 	}
-
+	public PaymentDTO getPayment() {
+		return payment;
+	}
+	public void setPayment(PaymentDTO payment) {
+		this.payment = payment;
+	}
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return super.toString();
+		return "PaymentRequestDTO [user=" + user + ", payment=" + payment + "]";
 	}
-
 }

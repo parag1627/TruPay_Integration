@@ -9,10 +9,10 @@ import com.cpt.payments.service.Validator;
 public class ValidationCheck2 implements Validator {
 
 	@Override
-	public boolean doValidate(PaymentRequestDto request) {
+	public void doValidate(PaymentRequestDto request) {
 		System.out.println("ValidationCheck2.doValidate invoked");
 		
-		return false;
+		
 	}
 
 }
