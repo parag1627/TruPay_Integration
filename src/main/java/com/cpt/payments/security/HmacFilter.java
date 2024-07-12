@@ -72,7 +72,7 @@ public class HmacFilter extends OncePerRequestFilter {
 				reqAsJson, signature);
 
 		if(isSignatureValid) {
-			System.out.println("Singature VALID, continue with further flow");
+			System.out.println("Signature VALID, continue with further flow");
 
 
 			//Put Authentication object in SecurityContextHolder. 
